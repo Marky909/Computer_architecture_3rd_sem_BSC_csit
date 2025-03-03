@@ -1,3 +1,7 @@
-~~$fined List of Questions.docx/
-CA project.pptx/
-Refined List of Questions.docx/
+# Ignore temporary files
+.tmp.driveupload/
+~$*
+
+# Ignore Specific Files
+CA project.pptx
+Refined List of Questions.docx
