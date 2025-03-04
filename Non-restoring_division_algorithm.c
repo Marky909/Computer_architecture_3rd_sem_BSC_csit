@@ -2,7 +2,7 @@
 
 #include <stdio.h>
 
-int a[5] = {0, 0, 0, 0, 0}, q[4], b[5], b2c[5];
+int a[5] = {0, 0, 0, 0, 0}, q[5], b[5], b2c[5]; // Adjust size of q array to match loop count
 
 void comp();
 void nonresdiv();
@@ -17,6 +17,7 @@ int main()
     {
         scanf("%d", &q[i]);
     }
+    q[4] = 0; // Ensure extra bit for binary operations
 
     printf("Enter divisor in binary form: ");
     for (int i = 0; i < 5; i++)
@@ -85,7 +86,7 @@ void comp()
     {
         b2c[i] = b[i];
         i--;
-    } while (b[i + 1] != 1);
+    } while (i >= 0 && b[i + 1] != 1);
     while (i >= 0)
     {
         b2c[i] = (b[i] + 1) % 2;
@@ -104,7 +105,7 @@ void nonresdiv()
         a_minus_b();
     else
         a_plus_b();
-    q[3] = (a[0] + 1) % 2;
+    q[4] = (a[0] + 1) % 2; // Use the 5th bit to store quotient information
 }
 
 void shiftleft()
@@ -113,7 +114,7 @@ void shiftleft()
     for (i = 0; i < 4; i++)
         a[i] = a[i + 1];
     a[4] = q[0];
-    for (i = 0; i < 3; i++)
+    for (i = 0; i < 4; i++)
         q[i] = q[i + 1];
 }
 
