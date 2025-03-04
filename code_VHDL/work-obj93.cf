@@ -1,0 +1,16 @@
+v 3
+file . "Alu_tb.vhdl" "20250304045234.000" "20250304103950.008":
+  entity tb_alu at 1( 0) + 0 on 21;
+  architecture behavior of tb_alu at 8( 111) + 0 on 22;
+file . "Encoder_4_2_tb.vhdl" "20250304013038.000" "20250304074154.473":
+  entity encoder_tb at 4( 19) + 0 on 17;
+  architecture tb of encoder_tb at 10( 103) + 0 on 18;
+file . "Encoder_4_2.vhdl" "20250304012956.000" "20250304071718.683":
+  entity encoder_source at 2( 10) + 0 on 11;
+  architecture dataflow of encoder_source at 12( 221) + 0 on 12;
+file . "Parity_checker.vhdl" "20250304015606.000" "20250304074145.290":
+  entity parity at 5( 65) + 0 on 15;
+  architecture parity_arch of parity at 22( 519) + 0 on 16;
+file . "Alu.vhdl" "20250304045126.000" "20250304103914.426":
+  entity alu at 1( 0) + 0 on 19;
+  architecture behavioral of alu at 12( 255) + 0 on 20;
